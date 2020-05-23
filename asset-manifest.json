@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-material-mini-landing/static/css/main.0284c47e.chunk.css",
+    "main.js": "/react-material-mini-landing/static/js/main.cf1b8e5a.chunk.js",
+    "main.js.map": "/react-material-mini-landing/static/js/main.cf1b8e5a.chunk.js.map",
+    "runtime-main.js": "/react-material-mini-landing/static/js/runtime-main.bc6b013f.js",
+    "runtime-main.js.map": "/react-material-mini-landing/static/js/runtime-main.bc6b013f.js.map",
+    "static/js/2.9daf8d02.chunk.js": "/react-material-mini-landing/static/js/2.9daf8d02.chunk.js",
+    "static/js/2.9daf8d02.chunk.js.map": "/react-material-mini-landing/static/js/2.9daf8d02.chunk.js.map",
+    "index.html": "/react-material-mini-landing/index.html",
+    "precache-manifest.dfbb1ab623b7825a84cd1161ba3040cd.js": "/react-material-mini-landing/precache-manifest.dfbb1ab623b7825a84cd1161ba3040cd.js",
+    "service-worker.js": "/react-material-mini-landing/service-worker.js",
+    "static/css/main.0284c47e.chunk.css.map": "/react-material-mini-landing/static/css/main.0284c47e.chunk.css.map",
+    "static/js/2.9daf8d02.chunk.js.LICENSE.txt": "/react-material-mini-landing/static/js/2.9daf8d02.chunk.js.LICENSE.txt",
+    "static/media/hero.jpg": "/react-material-mini-landing/static/media/hero.a161c642.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bc6b013f.js",
+    "static/js/2.9daf8d02.chunk.js",
+    "static/css/main.0284c47e.chunk.css",
+    "static/js/main.cf1b8e5a.chunk.js"
+  ]
+}
