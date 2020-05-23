@@ -7,30 +7,34 @@ export default function Section(props) {
 	var classes = makeStyles((theme) => ({
 		columnRoot: {
 			display: 'flex',
-			flexDirection:"column",
+			flexDirection: "column",
 		},
 		rowRoot: {
 			display: 'flex',
-			flexDirection:"row",
+			flexDirection: "row",
 		},
-		heroImage:{
-			height:"auto",
-			width:"100%",
-			margin:0,
-			padding:0,
+		heroImage: {
+			height: "auto",
+			width: "100%",
+			margin: 0,
+			padding: 0,
 			filter: "brightness(60%)",
-			transition:"all ease-in-out .2s",
-			overflow:"hidden",
-			"&:hover":{
+			transition: "all ease-in-out .2s",
+			overflow: "hidden",
+			"&:hover": {
 				filter: "brightness(100%)",
 			}
 		}
 		
 	}))();
-	return (<Box mt={6} maxWidth={1024} mx={"auto"}>
-		<Card elevation={4.0}
-		      className={props.row?classes.rowRoot:classes.columnRoot}>
-			{props.children}
-		</Card>
-	</Box>);
+	return (
+		<div id={props.id} style={{"padding-top":"8.5vh"}}>
+			<Box  maxWidth={1024} mx={"auto"} width={"90%"}>
+				<Card elevation={4.0}
+				      className={props.row ? classes.rowRoot : classes.columnRoot}>
+					{props.children}
+				</Card>
+			</Box>
+		</div>
+	);
 }

@@ -31,9 +31,8 @@ export default function NavBar(props) {
 			<ElevationScroll {...props}>
 				<AppBar>
 						<Typography variant="h5" align={"center"}>
-							<Box m="1.4rem" fontWeight={500}>"Scammers Are Out of Control Right Now"</Box></Typography>
-					
-					
+							<Box m="1.4rem" fontWeight={500}>"A Non-Technical Introduction to Cybersecurity"</Box></Typography>
+							
 				</AppBar>
 			</ElevationScroll>
 			
