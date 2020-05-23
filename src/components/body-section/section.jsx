@@ -28,7 +28,7 @@ export default function Section(props) {
 		
 	}))();
 	return (
-		<div id={props.id} style={{"padding-top":"8.5vh"}}>
+		<div id={props.id} style={{"padding-top":"8.5vh","padding-bottom":`${props.mb*8}px`}}>
 			<Box  maxWidth={1024} mx={"auto"} width={"90%"}>
 				<Card elevation={4.0}
 				      className={props.row ? classes.rowRoot : classes.columnRoot}>

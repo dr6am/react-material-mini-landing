@@ -1,21 +1,18 @@
 import React from "react";
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
-import Link from '@material-ui/core/Link';
 import ListItem from '@material-ui/core/ListItem';
-import Collapse from '@material-ui/core/Collapse';
 import ListItemText from '@material-ui/core/ListItemText';
-import Typography from '@material-ui/core/Typography';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+import {Card} from "@material-ui/core";
 
-const _scroll = (element)=>{
+const _scroll = (element) => {
 	var ele = document.getElementById(element);
-	window.scrollTo(ele.offsetLeft, ele.offsetTop);
+	ele.scrollIntoView({
+		behavior: 'smooth'
+	});
 }
-const breadcrumbNameMap = {
+const paragraphMap = {
+	'home':"Home",
 	'why-do-we-need-cybersecurity': 'Why do we need cybersecurity?',
 	'what-is-cybersecurity': 'What is cybersecurity?',
 	'threat-Models': 'Threat Models',
@@ -24,21 +21,53 @@ const breadcrumbNameMap = {
 	'system-and-application_security': 'System and application security',
 	'conclusion': 'Conclusion',
 };
+
 function ListItemLink(props) {
-	const { to, open, ...other } = props;
-	const primary = breadcrumbNameMap[to];
+	const {to, ...other} = props;
+	const primary = paragraphMap[to];
 	
 	return (
 		<li>
-			<ListItem button component={RouterLink} to={to} {...other}>
-				<ListItemText primary={primary} />
-				{open != null ? open ? <ExpandLess /> : <ExpandMore /> : null}
+			<ListItem button to={to} {...other}>
+				<ListItemText primary={primary} onClick={() => _scroll(to)}/>
 			</ListItem>
 		</li>
 	);
 }
-export default function NavigationBlock(props){
-	return(
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		display: 'flex',
+		flexDirection: 'column',
+		width: 300,
+		position: 'fixed',
+		bottom: "40%",
+		left: theme.spacing(2),
+		zIndex:999,
+	},
+	lists: {
+		backgroundColor: theme.palette.background.paper,
+		marginTop: theme.spacing(1),
+	},
+	nested: {
+		paddingLeft: theme.spacing(4),
+	},
+}));
+export default function NavigationBlock(props) {
+	const classes = useStyles();
+	return (
+		
+		<div className={classes.root}>
+			<Card variant={"outlined"}>
+				<nav className={classes.lists} aria-label="mailbox folders">
+					<List>
+						{
+							Object.keys(paragraphMap).map((key) => <ListItemLink to={key}/>)
+						}
+					</List>
+				</nav>
+			</Card>
+		</div>
 	
 	);
 }

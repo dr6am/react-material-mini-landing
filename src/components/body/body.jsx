@@ -7,7 +7,6 @@ import Section from "../body-section/section";
 import Typography from "@material-ui/core/Typography";
 import styled from "styled-components";
 import ScrollTopFab from '../floating-action-button/floating-action-button';
-
 const Bold = styled.span`
 	font-weight: 700;
 `;
@@ -34,7 +33,7 @@ export default function body(props) {
 	}))();
 	return (
 		<React.Fragment>
-			<Section row>
+			<Section row id={"home"}>
 				<img className={classes.heroImage} src={hero} alt={"Scammers Are Out of Control Right Now"}/>
 				<Box my={"auto"} mx={2}>
 					<Typography variant="h2" align={"left"}>
@@ -398,7 +397,7 @@ export default function body(props) {
 			
 			
 			</Section>
-			<Section id={"conclusion"}>
+			<Section id={"conclusion"} mb={5}>
 				<Box fontSize={"2.2em"} fontWeight={700} mt={5} mx={5}>Conclusion</Box>
 				<Box fontSize={"1.5em"} m={5}>
 					That was a very broad overview of some core principles in cybersecurity. I hope you’ll forgive my
@@ -410,7 +409,6 @@ export default function body(props) {
 					sure that the authentication and access control programs don’t have a backdoor that let attackers
 					in?
 				</Box>
-			
 			</Section>
 			{/*floating action button*/}
 			<ScrollTopFab/>
