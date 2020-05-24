@@ -30,9 +30,8 @@ export default function Footer() {
 								<Link target={"_blank"} rel="noopener noreferrer"
 								   href={"https://medium.com/@scyrus89/a-non-technical-introduction-to-cybersecurity-f4d42b9a1ff2"}>Source(medium)</Link>
 							</Box>
-							<Box m={3} fontSize={"1.2rem"} fontWeight={400} color={"#e0e0e0"}>
-								Written by:  <Link target={"_blank"} rel="noopener noreferrer"
-								   href={"https://medium.com/@scyrus89"}>Sauvik Das</Link>
+							<Box m={3} fontSize={"1rem"} fontWeight={400} color={"#e0e0e0"}>
+								Alejandro's entertainment ©   |   all rights reserved
 							</Box>
 						</Typography>
 					</FlexColumn>

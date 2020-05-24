@@ -18,7 +18,7 @@ export default function body(props) {
 			flexDirection: "row",
 		},
 		heroImage: {
-			height: "auto",
+			height: "56.25%",
 			width: "100%",
 			margin: 0,
 			padding: 0,

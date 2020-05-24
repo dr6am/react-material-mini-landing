@@ -1,14 +1,11 @@
 import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Divider from "@material-ui/core/Divider";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-
 import ListItemText from "@material-ui/core/ListItemText";
 import Drawer from "@material-ui/core/Drawer";
 import React from "react";
-import {useTheme} from "@material-ui/core/styles";
 
 const _scroll = (element) => {
 	var ele = document.getElementById(element);
@@ -39,7 +36,6 @@ function ListItemLink(props) {
 export default function (props){
 	const {open,closeFunc,classes} = props;
 	
-	const theme = useTheme();
 	
 	return <Drawer
 		className={classes.drawer}
@@ -52,7 +48,7 @@ export default function (props){
 	>
 		<div className={classes.drawerHeader}>
 			<IconButton onClick={closeFunc}>
-				{theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+				 <ChevronLeftIcon /> 
 			</IconButton>
 		</div>
 		<Divider />
